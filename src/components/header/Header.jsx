@@ -1,15 +1,20 @@
-import Planet from './components/planet/Planet';
+import { useState } from 'react';
+import Planet from '../planet/Planet';
 import { Icon, StyledH1, StyledHeader } from './styles';
 
 const Header = () => {
+	const [open, setOpen] = useState(false);
 	return (
 		<div>
 			<StyledHeader>
 				<StyledH1>THE PLANETS</StyledH1>
-				<Icon src='/public/images/icon-hamburger.svg' alt='' />
+				<Icon
+					onClick={() => setOpen(!open)}
+					src='/public/images/icon-hamburger.svg'
+					alt=''
+				/>
 			</StyledHeader>
-
-			<Planet></Planet>
+			<Planet opne={open}></Planet>
 		</div>
 	);
 };

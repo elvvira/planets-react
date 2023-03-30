@@ -1,27 +1,32 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const ContainerPlanet = styled.div`
+// const Nav = styled.nav`
+// 	transform: ${({ open }) => (open ? 'translateX(0px)' : 'translateX(400px)')};
+// 	transform: translateX(0px);
+// 	&--close {
+// 		transform: translateX(400px);
+// 	}
+// `;
+const ContainerPlanet = styled.ul`
+	left: ${({ open }) => (open ? '0px' : '500px')};
 	position: relative;
-	height: 70px;
-	width: 90%;
+	width: 85%;
 	margin-right: auto;
 	margin-left: auto;
-	display: flex;
-	align-items: center;
+`;
+const StyledLi = styled.li`
+	height: 70px;
 	gap: 1rem;
-	justify-content: center;
-
+	align-items: center;
 	&:not(:last-child) {
 		border-bottom: 1px solid rgba(151, 151, 151, 0.5);
-	}
-	&--show {
-		transform: translateX(400px);
 	}
 `;
 
 const StyledLink = styled(NavLink)`
 	font-family: 'League Spartan';
+	text-decoration: none;
 	font-style: normal;
 	width: 60px;
 	color: rgba(151, 151, 151, 0.5);
@@ -36,4 +41,4 @@ const StyledBall = styled.div`
 	border-radius: 3rem;
 	background: rgba(151, 151, 151, 0.5);
 `;
-export { StyledBall, ContainerPlanet, StyledLink };
+export { StyledBall, ContainerPlanet, StyledLink, StyledLi };

@@ -13,10 +13,13 @@ const GlobalStyles = createGlobalStyle`
     ul{
         display: flex;
         flex-direction: column;
+	padding: 0;
+
     }
     li{
         list-style: none;
         display: flex;
+        margin: 0;
 
     }
 
