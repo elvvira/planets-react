@@ -1,20 +1,25 @@
-import { ContainerPlanet, StyledBall, StyledLi, StyledLink } from './styles';
-import { PlanetsInfo } from '../../constants/info';
-const Planet = ({ open }) => {
+import { Arrow, ContainerPlanet, Nav, StyledLi, StyledLink } from './styles';
+import { PlanetsMenu } from '../../constants/info';
+const Planet = ({ open, setOpen }) => {
 	return (
-		<nav>
+		<Nav>
 			<ContainerPlanet open={open}>
-				{PlanetsInfo.map(card => {
+				{PlanetsMenu.map(card => {
 					return (
 						<StyledLi key={card.id}>
-							<StyledBall />
-							<StyledLink to=''>{card.planet}</StyledLink>
-							<img src='/public/images/icon-chevron.svg' alt='' />
+							<StyledLink color={card.color} to={card.path}>
+								{card.planet}
+							</StyledLink>
+							<Arrow
+								onClick={() => setOpen(!open)}
+								src='/public/images/icon-chevron.svg'
+								alt=''
+							/>
 						</StyledLi>
 					);
 				})}
 			</ContainerPlanet>
-		</nav>
+		</Nav>
 	);
 };
 export default Planet;
