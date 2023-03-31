@@ -8,23 +8,29 @@ const ContainerPlanet = styled.ul`
 	left: ${({ open }) => (open ? '0px' : '700px')};
 	position: absolute;
 	background-color: #070724;
-	bottom: -90px;
+	top: 70px;
+
 	width: 100%;
+	height: 100vh;
 	padding-right: 2rem;
 	padding-left: 3rem;
-	height: 100vh;
 	margin-right: auto;
 	margin-left: auto;
 	transition-duration: 0.5s;
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
+	z-index: 1;
 	@media screen and (min-width: 768px) {
 		flex-direction: row;
 		left: 0;
+		top: 70px;
+		height: 20px;
 	}
 	@media screen and (min-width: 1040px) {
 		width: 665px;
+		top: -20px;
+		right: -700px;
 	}
 `;
 const StyledLi = styled.li`

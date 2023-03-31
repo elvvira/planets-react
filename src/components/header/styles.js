@@ -5,6 +5,7 @@ const HeaderContainer = styled.header`
 
 	@media screen and (min-width: 768px) {
 		flex-direction: column;
+		margin-bottom: 20px;
 	}
 	@media screen and (min-width: 1040px) {
 		flex-direction: row;
@@ -56,11 +57,11 @@ const StyledH1 = styled.h1`
 	font-size: 28px;
 	padding-left: 1rem;
 	@media screen and (min-width: 768px) {
+		text-align: center;
 		padding-left: 0rem;
-		width: 90px;
 		margin-right: auto;
 		margin-left: auto;
-		margin-bottom: -10px;
+		z-index: 10;
 	}
 	@media screen and (min-width: 768px) {
 		width: 200px;

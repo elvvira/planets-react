@@ -6,6 +6,7 @@ const Router = () => {
 	return (
 		<Routes>
 			{PlanetsMenu.map(planet => {
+				console.log(planet.planet);
 				return (
 					<Route
 						key={planet.id}
